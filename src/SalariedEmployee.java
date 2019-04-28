@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class SalariedEmployee extends Employee {
   private String socialSecurityNumber;
   private double fixedMonthlyPayment;
@@ -6,7 +8,6 @@ public class SalariedEmployee extends Employee {
   public SalariedEmployee(String employeeId, String name, String socialSecurityNumber) {
     super(employeeId, name);
     this.socialSecurityNumber = socialSecurityNumber;
-    // TODO fill in code here
   }
 
   public String getSocialSecurityNumber() {
@@ -17,8 +18,8 @@ public class SalariedEmployee extends Employee {
 
   public void setSocialSecurityNumber(String socialSecurityNumber) {
     this.socialSecurityNumber = socialSecurityNumber;
-    // TODO fill in code here
   }
+
   public double getFixedMonthlyPayment(){
     return fixedMonthlyPayment;
   }
@@ -37,6 +38,6 @@ public class SalariedEmployee extends Employee {
   // TODO fill in code here
 
   public String toString() {
-    return super.toString() + String.format("%.2f",fixedMonthlyPayment);
+    return super.toString() + String.format(Locale.ENGLISH, "%.2f",fixedMonthlyPayment);
   }
 }
