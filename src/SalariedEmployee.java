@@ -12,7 +12,6 @@ public class SalariedEmployee extends Employee {
   public String getSocialSecurityNumber() {
     // TODO fill in code here and replace the return statement
     return socialSecurityNumber;
-
   }
 
   public void setSocialSecurityNumber(String socialSecurityNumber) {
@@ -20,12 +19,6 @@ public class SalariedEmployee extends Employee {
     // TODO fill in code here
   }
   public double getFixedMonthlyPayment(){
-    return fixedMonthlyPayment;
-  }
-
-  @Override
-  public double getAverageMonthlySalary() {
-    // TODO fill in code here and replace the return statement
     return fixedMonthlyPayment;
   }
 
@@ -38,5 +31,10 @@ public class SalariedEmployee extends Employee {
 
   public String toString() {
     return super.toString() + String.format("%.2f",fixedMonthlyPayment);
+  }
+
+  @Override
+  public void calculatePay(){
+    averageMonthlySalary = fixedMonthlyPayment;
   }
 }
